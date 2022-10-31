@@ -1,1 +1,3 @@
-# 1030510398_BS441_WebYazilimGelistirme
+Öğrenci Numarası: 1030510398
+Öğrenci Adı: Samet Barut
+Ders Adı: BS441 Web Yazılım Geliştirm
