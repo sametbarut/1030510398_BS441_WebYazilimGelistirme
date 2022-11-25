@@ -1,0 +1,21 @@
+.altbilgi {
+
+    width: 100%;
+    height: 30vh;
+    font-size: 40px;
+    background-color: #063170;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: space-around;
+}
+
+/* break poients screen  */
+@media only screen and (max-width: 768px) {
+    .altbilgi {
+        font-size: 20px;
+        /* margin-top: 50px; */
+    }
+}
