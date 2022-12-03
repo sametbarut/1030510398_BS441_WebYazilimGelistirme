@@ -8,7 +8,6 @@ function Anasayfa() {
     return (
         <div className='main'>
             <div className='center2'>
-                <h1> TAŞ KAĞIT MAKAS </h1>
             </div>
             <div className='header'>
                 <img src= "tas.png" alt='rock' />
@@ -27,26 +26,25 @@ function Anasayfa() {
                             fontSize: '20px',
                         }}
                     >
-                        OYNAMAYA BAŞLA
+                        Oynama Başla
                     </Link>{' '}
                 </button>
+                <p></p>
                 <button>
                     {' '}
                     <Link
-                        to='/Oyna'
+                        to='/ZamanaKarsi'
                         className='press'
                         style={{
-                            color: 'red',
+                            color: 'black',
                             textDecoration: 'none',
                             fontSize: '20px',
                         }}
                     >
-                        OYNAMAYA BAŞLA
+                        Zamana Karşı Oyna
                     </Link>{' '}
                 </button>
                 <div className='center'>
-                    <h1> Samet BARUT</h1>
-                    <h2> 1030510398</h2>
                 </div>
             </div>
         </div>

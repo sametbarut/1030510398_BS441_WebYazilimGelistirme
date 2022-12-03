@@ -1,20 +1,27 @@
 .altbilgi {
 
+}
+
+footer {
+
+
     width: 100%;
-    height: 30vh;
+    height: 100%;
     font-size: 40px;
-    background-color: #063170;
+    background-color: black;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10px;
+    margin-bottom: 0px;
     justify-content: space-around;
+    padding: 2rem;
 }
+
 
 /* break poients screen  */
 @media only screen and (max-width: 768px) {
-    .altbilgi {
+    .footer {
         font-size: 20px;
         /* margin-top: 50px; */
     }

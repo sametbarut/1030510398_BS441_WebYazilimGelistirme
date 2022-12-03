@@ -1,0 +1,83 @@
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css');
+
+body {
+    font-family: Poppins, sans-serif;
+    background-color: rgb(247, 253, 255);
+}
+
+.container {
+    width: 90%;
+    min-height: 90vh;
+    padding: 0px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: auto;
+}
+
+.row {
+    border-style: solid;
+    border-color: rgb(242, 242, 242);
+    border-radius: 8px;
+    display: flex;
+    padding: 0;
+    background-color: white;
+    overflow: hidden;
+    width: 100%;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.col-2 {
+    justify-content: center;
+}
+
+.image {
+    padding: 0px;
+    margin: 0px;
+}
+
+._404-text {
+    font-size: 8rem;
+    color: #2e6581;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+.description {
+    text-align: center;
+    color: #d1d1d1;
+    width: 100%;
+}
+
+.back-home {
+    width: 100%;
+    text-align: center;
+    bottom: 100px;
+    margin-top: 100px;
+}
+
+a {
+    color: rgb(244, 13, 13);
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .col {
+        width: 100%;
+    }
+
+    .col-2 {
+        padding: 80px 0;
+    }
+}

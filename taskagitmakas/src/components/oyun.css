@@ -1,16 +1,43 @@
 .game {
     /* margin-top: 20px; */
-    padding: 80px;
+    padding: 5%;
     /* width: 100%; */
-    height: 50vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 /* header  */
+
+.popupbtn{
+    margin-top: 100px;
+    text-align: center;
+}
+
+.el{
+    width: 243px;
+    height: 214px;
+    transform: rotatey(180deg);
+}
+
+.el2{
+    width: 243px;
+    height: 214px;
+}
+
+.kagit{
+    cursor: help;
+}
+.tas{
+    cursor: help;
+}
+.makas{
+    cursor: help;
+}
+
 .header {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-size: 50px;
 }
 .header strong {
@@ -22,12 +49,13 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    /* flex-wrap: wrap; */
+    margin-top: 0px;
 }
 .top p {
     font-weight: bold;
 }
 .top .computer {
+    margin-top: 0;
     text-align: center;
 }
 
