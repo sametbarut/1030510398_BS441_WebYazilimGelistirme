@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './oyun.css'
+import './butonlar.css'
 import rock from './rock.png'
 import paper from './paper.png'
 import scissors from './scissors.png'
@@ -86,21 +87,21 @@ function Game() {
             <div className='bottom'>
                 <img
                     width='200px'
-                    className='tas'
+                    className='card'
                     src='tas.png'
                     alt='rock'
                     onClick={rockBtn}
                 />
                 <img
                     width='200px'
-                    className='kagit'
+                    className='card'
                     src='kagit.png'
                     alt='rock'
                     onClick={paperBtn}
                 />
                 <img
                     width='200px'
-                    className='makas'
+                    className='card'
                     src='makas.png'
                     alt='rock'
                     onClick={scissorsBtn}
