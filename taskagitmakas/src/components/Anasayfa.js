@@ -1,7 +1,8 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import './anasayfa.css';
-import Navbar from "./Navbar";
+import './Footer'
+import Footer from "./Footer";
 
 
 function Anasayfa() {
@@ -14,6 +15,7 @@ function Anasayfa() {
                 <img src= "kagit.png" alt='paper' />
                 <img src="makas.png" alt='scissors' />
             </div>
+            <br/>
             <div className='buttom'>
                 <button>
                     {' '}

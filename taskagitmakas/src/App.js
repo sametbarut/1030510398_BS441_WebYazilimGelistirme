@@ -15,6 +15,9 @@ function App() {
   return (
     <div className="App">
         <Navbar/>
+        <br/>
+        <br/>
+        <br/>
         <Routes>
             <Route path='/' element={<Anasayfa />} />
             <Route path='/Oyna' element={<Oyna />} />
