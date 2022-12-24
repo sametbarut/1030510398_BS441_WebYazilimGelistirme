@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './oyun.css'
-import './butonlar.css'
 import rock from './rock.png'
 import paper from './paper.png'
 import scissors from './scissors.png'
@@ -62,10 +61,6 @@ function Game() {
 
     return (
         <div className='game'>
-            <h1 class='header'>
-                {' '}
-                <strong>{status}</strong>{' '}
-            </h1>
             <div className='top'>
                 <div className='computer'>
                     <p>Bilgisayar</p>
@@ -73,6 +68,10 @@ function Game() {
                         <strong className='red'>{computerCounter}</strong>
                     </p>
                 </div>
+                <h1 className='header'>
+                    {' '}
+                    <strong>{status}</strong>{' '}
+                </h1>
                 <div className='player'>
                     <p>Oyuncu</p>
                     <p className='score'>
@@ -87,21 +86,21 @@ function Game() {
             <div className='bottom'>
                 <img
                     width='200px'
-                    className='card'
+                    className='tas'
                     src='tas.png'
                     alt='rock'
                     onClick={rockBtn}
                 />
                 <img
                     width='200px'
-                    className='card'
+                    className='kagit'
                     src='kagit.png'
                     alt='rock'
                     onClick={paperBtn}
                 />
                 <img
                     width='200px'
-                    className='card'
+                    className='makas'
                     src='makas.png'
                     alt='rock'
                     onClick={scissorsBtn}

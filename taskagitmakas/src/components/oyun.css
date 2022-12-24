@@ -25,14 +25,33 @@
     height: 214px;
 }
 
-.kagit{
-    cursor: help;
+.kagit {
+    transition: transform 0.1s ease-in;
+    cursor: grab;
+    border-style: double;
 }
-.tas{
-    /*cursor: help;*/
+
+.kagit:active {
+    transform: translateX(-5px);
 }
-.makas{
-    cursor: help;
+.tas {
+    transition: transform 0.1s ease-in;
+    cursor: grab;
+    border-style: double;
+}
+
+.tas:active {
+    transform: translateX(-5px);
+}
+
+.makas {
+    transition: transform 0.1s ease-in;
+    cursor: grab;
+    border-style: double;
+}
+
+.makas:active {
+    transform: translateX(-5px);
 }
 
 .header {
