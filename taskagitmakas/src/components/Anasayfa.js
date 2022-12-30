@@ -1,19 +1,19 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import './anasayfa.css';
+import '../styles/anasayfa.css';
 import './Footer'
-import Footer from "./Footer";
-
-
+import tas from '../images/tas.png'
+import kagit from '../images/kagit.png'
+import makas from '../images/makas.png'
 function Anasayfa() {
     return (
         <div className='main'>
             <div className='center2'>
             </div>
             <div className='header'>
-                <img src= "tas.png" alt='rock' />
-                <img src= "kagit.png" alt='paper' />
-                <img src="makas.png" alt='scissors' />
+                <img src={tas} alt='rock' />
+                <img src= {kagit} alt='paper' />
+                <img src={makas} alt='scissors' />
             </div>
             <br/>
             <div className='buttom'>

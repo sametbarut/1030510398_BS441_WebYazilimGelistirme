@@ -1,11 +1,10 @@
 import Container from 'react-bootstrap/Container';
-import './navbar.css';
+import '../styles/navbar.css';
 import Navbar from 'react-bootstrap/Navbar';
 import {Link} from "react-router-dom";
 
 function ColorSchemesExample() {
     return (
-
         <>
             <div>
             </div>
@@ -17,14 +16,10 @@ function ColorSchemesExample() {
                     >
                         TAŞ KAĞIT MAKAS
                     </Link>{' '}
-
                 </Navbar>
             </div>
 
         </>
     )
 }
-
-
-
 export default ColorSchemesExample;

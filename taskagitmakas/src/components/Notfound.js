@@ -1,5 +1,5 @@
 import React from 'react';
-import './notfoundpage.css';
+import '../styles/notfoundpage.css';
 
 export default function App() {
     return (
@@ -14,11 +14,11 @@ export default function App() {
                 </div>
                 <div className="col col-2">
                     <p className="_404-text"> 404 </p>
-                    <p className="description">Seems like you got lost</p>
+                    <p className="description">Kaybolmuşa Benziyorsun.....</p>
                     <div className="back-home">
                         <a href="/">
                             <i className="bi bi-arrow-left"> </i>
-                            BACK HOME
+                            EVE DÖN
                         </a>
                     </div>
                 </div>

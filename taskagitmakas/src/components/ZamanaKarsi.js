@@ -1,20 +1,21 @@
-import React, {useEffect, useState} from 'react'
-import './oyun.css'
-import rock from './rock.png'
-import paper from './paper.png'
-import scissors from './scissors.png'
-import modal from "bootstrap/js/src/modal";
-
+import React, {createContext, useEffect, useState} from 'react'
+import '../styles/oyun.css'
+import rock from '../images/rock.png'
+import paper from '../images/paper.png'
+import scissors from '../images/scissors.png'
+import tas from '../images/tas.png'
+import kagit from '../images/kagit.png'
+import makas from '../images/makas.png'
+import {Alert} from "react-bootstrap";
+import {CountdownTimer} from "./CountdownTimer";
 
     function Game() {
-
         const gameArr = [rock, paper, scissors]
         const [srcPlayer, setSrcPlayer] = useState(rock)
         const [srcComputer, setSrcComputer] = useState(rock)
         const [status, setStatus] = useState('Oyun Başladı...')
         const [playerCounter, setPlayerCounter] = useState(0)
-        const [computerCounter, setcComputerCounter] = useState(0)
-
+        const [computerCounter, setComputerCounter] = useState(0)
 
         const rockBtn = (props) => {
             setSrcPlayer(rock)
@@ -25,7 +26,7 @@ import modal from "bootstrap/js/src/modal";
             }
             if (gameArr[i] === paper) {
                 setStatus('Kaybettin')
-                setcComputerCounter(computerCounter + 1)
+                setComputerCounter(computerCounter + 1)
             }
             if (gameArr[i] === scissors) {
                 setStatus('Kazandın')
@@ -45,7 +46,7 @@ import modal from "bootstrap/js/src/modal";
             }
             if (gameArr[i] === scissors) {
                 setStatus('Kaybettin')
-                setcComputerCounter(computerCounter + 1)
+                setComputerCounter(computerCounter + 1)
             }
         }
         const scissorsBtn = () => {
@@ -54,7 +55,7 @@ import modal from "bootstrap/js/src/modal";
             setSrcComputer(gameArr[i])
             if (gameArr[i] === rock) {
                 setStatus('Kaybettin')
-                setcComputerCounter(computerCounter + 1)
+                setComputerCounter(computerCounter + 1)
             }
             if (gameArr[i] === paper) {
                 setStatus('Kazandın')
@@ -65,18 +66,39 @@ import modal from "bootstrap/js/src/modal";
             }
         }
 
-        function durum() {
+        function Sonuc(){
             if (playerCounter>computerCounter){
-                const skor=playerCounter-computerCounter;
-                const mdurum="Puan farkkla öndesin"
-            } else {
-                const skor=computerCounter-playerCounter;
-                const mdurum="Puan farkla geridesin"
+                return(
+                    <h2>
+                        <Alert variant="success" className="my-alert">
+                            Senin skorun: {playerCounter} Bilgisayarın Skoru: {computerCounter} <br/>
+                            Total Skor: {playerCounter-computerCounter}
+                        </Alert>
+                    </h2>
+                )
+            } else if (playerCounter<computerCounter){
+                return (
+                    <h2>
+                        <Alert variant="danger">
+                            Senin skorun: {playerCounter} Bilgisayarın Skoru: {computerCounter} <br/>
+                            Total Skor: {playerCounter-computerCounter}
+                        </Alert>
+                    </h2>
+                )
+            } else if (playerCounter===computerCounter){
+                return (
+                    <h2>
+                        <Alert variant="warning">
+                            Senin skorun: {playerCounter} Bilgisayarın Skoru: {computerCounter} <br/>
+                            Total Skor: {playerCounter-computerCounter}
+                        </Alert>
+                    </h2>
+                )
             }
         }
 
         return (
-
+            <div>
             <div className='game'>
                 <div className='top'>
                     <div className='computer'>
@@ -86,12 +108,8 @@ import modal from "bootstrap/js/src/modal";
                         </p>
                     </div>
                     <h1 className='header'>
-                        {' '}
                         <strong>{status}</strong>{' '}
-                        <h1>Skorun: {playerCounter} ve Bilgisayarın Skoru:{computerCounter}
-                            <br/>
-                            Genel Skor: {playerCounter-computerCounter}
-                        </h1>
+                        <Sonuc/>
                     </h1>
                     <div className='player'>
                         <p>Oyuncu</p>
@@ -102,7 +120,7 @@ import modal from "bootstrap/js/src/modal";
                 </div>
                 <div className='middle'>
                     <img src={srcComputer} alt='rock' className={`el`}/>
-                    <CountdownTimer seconds={5}/>
+                    <CountdownTimer seconds={10}/>
                     <img src={srcPlayer} alt='rock' className={`el2`}/>
 
                 </div>
@@ -110,52 +128,28 @@ import modal from "bootstrap/js/src/modal";
                     <img
                         width='200px'
                         className='tas'
-                        src='tas.png'
+                        src={tas}
                         alt='rock'
                         onClick={rockBtn}
                     />
                     <img
                         width='200px'
                         className='kagit'
-                        src='kagit.png'
-                        alt='rock'
+                        src={kagit}
+                        alt='paper'
                         onClick={paperBtn}
                     />
                     <img
                         width='200px'
                         className='makas'
-                        src='makas.png'
-                        alt='rock'
+                        src={makas}
+                        alt='scissors'
                         onClick={scissorsBtn}
                     />
                 </div>
             </div>
+            </div>
         )
     }
-function CountdownTimer({seconds}) {
-        const [timeLeft, setTimeLeft] = useState(seconds);
-
-        useEffect(() => {
-            const intervalId = setInterval(() => {
-                setTimeLeft(timeLeft - 1);
-            }, 1000);
-
-            return () => clearInterval(intervalId);
-        }, [timeLeft]);
-
-        useEffect((props) => {
-            if (timeLeft === -1) {
-                alert("Zaman Dolduuu!!! Oyun Yeniden Başlatılacak.")
-                window.location='/ZamanaKarsi';
-            }
-        }, [timeLeft]);
-
-        return (
-            <div>
-                <h2>Kalan Süre: {timeLeft} Saniye</h2>
-            </div>
-        );
-    }
-
 
 export default Game

@@ -3,7 +3,7 @@ import './App.css';
 import {Route, Routes} from "react-router-dom";
 import Anasayfa from "./components/Anasayfa";
 import Oyna from "./components/Oyna"
-import React from "react";
+import React, {useState} from "react";
 import Navbar from "./components/Navbar";
 import Notfound from "./components/Notfound";
 import ZamanaKarsi from "./components/ZamanaKarsi";
@@ -11,7 +11,6 @@ import Footer from "./components/Footer";
 
 
 function App() {
-
   return (
     <div className="App">
         <Navbar/>

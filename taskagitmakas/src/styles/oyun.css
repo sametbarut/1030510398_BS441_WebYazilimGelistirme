@@ -26,6 +26,8 @@
 }
 
 .kagit {
+    height: 111px;
+    width: 135px;
     transition: transform 0.1s ease-in;
     cursor: grab;
     border-style: double;
@@ -35,6 +37,8 @@
     transform: translateX(-5px);
 }
 .tas {
+    height: 111px;
+    width: 135px;
     transition: transform 0.1s ease-in;
     cursor: grab;
     border-style: double;
@@ -45,6 +49,8 @@
 }
 
 .makas {
+    height: 111px;
+    width: 135px;
     transition: transform 0.1s ease-in;
     cursor: grab;
     border-style: double;

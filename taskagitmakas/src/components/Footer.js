@@ -1,5 +1,4 @@
 import React from 'react';
-
 function Footer() {
     const footerStyles = {
         position: 'fixed',

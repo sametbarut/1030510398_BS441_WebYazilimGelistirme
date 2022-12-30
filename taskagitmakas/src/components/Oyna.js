@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
-import './oyun.css'
-import rock from './rock.png'
-import paper from './paper.png'
-import scissors from './scissors.png'
+import '../styles/oyun.css'
+import rock from '../images/rock.png'
+import paper from '../images/paper.png'
+import scissors from '../images/scissors.png'
+import tas from '../images/tas.png'
+import kagit from '../images/kagit.png'
+import makas from '../images/makas.png'
+import {Alert} from "react-bootstrap";
 function Game() {
     const gameArr = [rock, paper, scissors]
     const [srcPlayer, setSrcPlayer] = useState(rock)
@@ -59,6 +63,37 @@ function Game() {
         }
     }
 
+    function Sonuc(){
+        if (playerCounter>computerCounter){
+            return(
+                <h2>
+                    <Alert variant="success" className="my-alert">
+                        Senin skorun: {playerCounter} Bilgisayarın Skoru: {computerCounter} <br/>
+                        Total Skor: {playerCounter-computerCounter}
+                    </Alert>
+                </h2>
+            )
+        } else if (playerCounter<computerCounter){
+            return (
+                <h2>
+                    <Alert variant="danger">
+                        Senin skorun: {playerCounter} Bilgisayarın Skoru: {computerCounter} <br/>
+                        Total Skor: {playerCounter-computerCounter}
+                    </Alert>
+                </h2>
+            )
+        } else if (playerCounter===computerCounter){
+            return (
+                <h2>
+                    <Alert variant="warning">
+                        Senin skorun: {playerCounter} Bilgisayarın Skoru: {computerCounter} <br/>
+                        Total Skor: {playerCounter-computerCounter}
+                    </Alert>
+                </h2>
+            )
+        }
+    }
+
     return (
         <div className='game'>
             <div className='top'>
@@ -71,6 +106,7 @@ function Game() {
                 <h1 className='header'>
                     {' '}
                     <strong>{status}</strong>{' '}
+                    <Sonuc/>
                 </h1>
                 <div className='player'>
                     <p>Oyuncu</p>
@@ -87,21 +123,21 @@ function Game() {
                 <img
                     width='200px'
                     className='tas'
-                    src='tas.png'
+                    src={tas}
                     alt='rock'
                     onClick={rockBtn}
                 />
                 <img
                     width='200px'
                     className='kagit'
-                    src='kagit.png'
+                    src={kagit}
                     alt='rock'
                     onClick={paperBtn}
                 />
                 <img
                     width='200px'
                     className='makas'
-                    src='makas.png'
+                    src={makas}
                     alt='rock'
                     onClick={scissorsBtn}
                 />
